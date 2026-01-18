@@ -67,6 +67,13 @@ Node.js 18+ recommended
 
     npm run build
 
+
+**5. Clean build output**
+
+    npm run clean
+
+- Removes the `dist/` directory before a fresh build
+
 ## Notes
 
 - This template uses a single Webpack configuration in development mode.
