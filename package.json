@@ -6,7 +6,10 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write src"
   },
   "keywords": [
     "webpack",
@@ -17,9 +20,17 @@
   "author": "nishadnp",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/css": "^0.14.1",
+    "@eslint/js": "^9.39.2",
+    "@eslint/json": "^1.0.0",
+    "@eslint/markdown": "^7.5.1",
     "css-loader": "^7.1.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.3.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.5",
+    "prettier": "3.8.1",
     "rimraf": "^6.1.2",
     "style-loader": "^4.0.0",
     "webpack": "^5.104.1",
