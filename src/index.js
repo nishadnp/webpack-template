@@ -1,5 +1,5 @@
 // ./src/index.js
 
-import "./style.css";
+import "./styles/base.css";
 
 console.log("Webpack is working");
