@@ -5,8 +5,8 @@
   "main": "./src/index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "webpack",
-    "dev": "webpack serve",
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "format": "prettier --write src",
