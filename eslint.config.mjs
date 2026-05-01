@@ -7,17 +7,36 @@ import { defineConfig } from "eslint/config";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
+  // Browser code (your app)
   {
-    files: ["**/*.{js,mjs,cjs}"],
+    files: ["src/**/*.{js,mjs,cjs}"],
     plugins: { js },
     extends: ["js/recommended"],
-    languageOptions: { globals: globals.browser },
+    languageOptions: {
+      globals: globals.browser,
+    },
   },
+
+  // Node environment (configs, tooling)
+  {
+    files: [
+      "*.config.{js,cjs,mjs}",
+      "webpack.*.js",
+      "eslint.config.mjs",
+    ],
+    plugins: { js },
+    extends: ["js/recommended"],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+
+  // JSON
   {
     files: ["**/*.json"],
     plugins: { json },
     language: "json/json",
-    extends: ["json/recommended"], 
+    extends: ["json/recommended"],
   },
   {
     files: ["**/*.jsonc"],
@@ -31,17 +50,23 @@ export default defineConfig([
     language: "json/json5",
     extends: ["json/recommended"],
   },
+
+  // Markdown
   {
     files: ["**/*.md"],
     plugins: { markdown },
     language: "markdown/gfm",
     extends: ["markdown/recommended"],
   },
+
+  // CSS
   {
     files: ["**/*.css"],
     plugins: { css },
     language: "css/css",
     extends: ["css/recommended"],
   },
+
+  // Prettier last
   eslintConfigPrettier,
 ]);
