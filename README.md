@@ -28,6 +28,8 @@ A minimal, reusable JavaScript project template powered by Webpack. Includes dev
 
 - Husky + lint-staged to enforce linting/formatting before commits (scoped to `src/`)
 
+- Split Webpack configuration (common, development, production)
+
 ## Folder Structure
 
 ```bash
@@ -45,8 +47,11 @@ webpack-template/
 ├── src/
 │   ├── index.html
 │   ├── index.js
-│   └── style.css
-└── webpack.config.js
+│   └── styles/
+│       └── base.css
+├── webpack.common.js
+├── webpack.dev.js
+└── webpack.prod.js
 ```
 
 ## Requirements
@@ -88,15 +93,11 @@ Node.js 18+ recommended
 
 ## Code Quality
 
-This template includes **ESLint, Prettier, Husky, and lint-staged** to enforce consistent code style.
+- This template includes **ESLint, Prettier, Husky, and lint-staged** to enforce consistent code style.
 
-Pre-commit hooks automatically lint and format **only files inside `src/`**, intentionally leaving configuration files and tooling untouched.
+- Pre-commit hooks automatically lint and format **only files inside `src/`**, intentionally leaving configuration files and tooling untouched.
 
-## Notes
-
-- This template uses a single Webpack configuration in development mode.
-
-- Production-specific optimizations (separate configs, webpack-merge, deployment scripts) are intentionally left out and can be added per project as needed.
+- ESLint is configured with environment-specific rules for browser (`src/`) and Node (config files) to avoid false positives.
 
 <br>
 
