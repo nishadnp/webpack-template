@@ -6,11 +6,11 @@
 
 <br>
 
-A minimal, reusable JavaScript project template powered by Webpack. Includes development setup with CSS, HTML, image support, and code quality tooling.
+A reusable JavaScript project template powered by Webpack. Includes development tooling, code quality enforcement, and a scalable project structure for modern frontend applications.
 
 ## Features
 
-- Webpack 5 configuration for development
+- - Webpack 5 configuration for development and production
 
 - Dev server with live reload
 
@@ -22,7 +22,7 @@ A minimal, reusable JavaScript project template powered by Webpack. Includes dev
 
 - Image assets support (`png`, `jpg`, `svg`, `gif`)
 
-- Clean, minimal structure for quick project starts
+- Organized project structure for quick project starts
 
 - ESLint + Prettier for code quality and formatting
 
@@ -79,7 +79,7 @@ Node.js 18+ recommended
 
 - **HTML template:** src/index.html
 
-- **Base styles:** src/style.css
+- **Base styles:** src/styles/base.css
 
 **4. Build**
 
